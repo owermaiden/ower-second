@@ -9,8 +9,11 @@
                 [ngClass]="{'btn-lg': isDisabled}"
                 (click)="onClick()" >Click Me!</button>
     </div>
-    <div class="col-6">
-
+    <div class="col-6" *ngIf="isAuthorized">
+        <h2>Mentors</h2>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let mentor of mentors">{{ mentor }}</li>
+        </ul>
     </div>
 </div>
 

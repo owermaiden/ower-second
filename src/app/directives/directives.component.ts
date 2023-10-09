@@ -8,9 +8,12 @@ import { Component } from '@angular/core';
 export class DirectivesComponent {
   isDisabled: boolean = true;
   count: number | undefined; 
+  isAuthorized: boolean = true;
+  mentors: string[] = ['Ower', 'Sahin', 'Matt'];
 
 
   onClick(){
     this.isDisabled = !this.isDisabled;
+    this.isAuthorized = !this.isAuthorized;
   }
 }
