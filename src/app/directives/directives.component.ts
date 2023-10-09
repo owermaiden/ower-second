@@ -25,6 +25,7 @@ export class DirectivesComponent {
 
   onClick(){
     this.isDisabled = !this.isDisabled;
+    this.iMentors[0].likeCount++;
   }
 }
 
