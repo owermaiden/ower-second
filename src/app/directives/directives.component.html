@@ -9,10 +9,16 @@
                 [ngClass]="{'btn-lg': isDisabled}"
                 (click)="onClick()" >Click Me!</button>
     </div>
-    <div class="col-6" *ngIf="mentors">
+    <div class="col-6" >
         <h2>Mentors</h2>
-        <ul class="list-group">
+        <ul class="list-group" *ngIf="mentors">
             <li class="list-group-item" *ngFor="let mentor of mentors">{{ mentor }}</li>
+        </ul>
+        <ul [ngStyle]="{'list-style-type': isDisabled? 'circle' : 'square'}">
+            <li  *ngFor="let mymentor of myMentors">{{ mymentor.name + " " + mymentor.likeCount }}</li>
+        </ul>
+        <ul [ngStyle]="{'list-style-type': isDisabled? 'square' : 'circle'}">
+            <li  *ngFor="let imentor of iMentors">{{ imentor.name + " " + imentor.likeCount }}</li>
         </ul>
     </div>
 </div>

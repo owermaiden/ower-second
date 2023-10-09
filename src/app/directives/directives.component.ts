@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Mentor } from '../shared/mentor';
 
 @Component({
   selector: 'app-directives',
@@ -10,9 +11,24 @@ export class DirectivesComponent {
   count: number | undefined; 
   isAuthorized: boolean = true;
   mentors: string[] = ['Ower', 'Sahin', 'Matt'];
+  myMentors: Mentor[] = [
+    new Mentor('Ower', 12),
+    new Mentor('Sahin', 43),
+    new Mentor('Matt', 2)
+  ];
+  iMentors: IMentor[] = [
+    { name: 'Ower' , likeCount: 12 },   // JSON 
+    { name: 'Sahin' , likeCount: 23 },
+    { name: 'Matt' , likeCount: 23 }
+  ]
 
 
   onClick(){
     this.isDisabled = !this.isDisabled;
   }
+}
+
+interface IMentor {
+  name: string,
+  likeCount: number
 }
