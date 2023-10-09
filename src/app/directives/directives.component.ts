@@ -14,6 +14,5 @@ export class DirectivesComponent {
 
   onClick(){
     this.isDisabled = !this.isDisabled;
-    this.isAuthorized = !this.isAuthorized;
   }
 }
