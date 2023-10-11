@@ -12,9 +12,9 @@ export class DirectivesComponent {
   isAuthorized: boolean = true;
   mentors: string[] = ['Ower', 'Sahin', 'Matt'];
   myMentors: Mentor[] = [
-    new Mentor('Ower', 12),
-    new Mentor('Sahin', 43),
-    new Mentor('Matt', 2)
+    new Mentor(1,'Ower', 12),
+    new Mentor(2,'Sahin', 43),
+    new Mentor(3,'Matt', 2)
   ];
   iMentors: IMentor[] = [
     { name: 'Ower' , likeCount: 12 },   // JSON 

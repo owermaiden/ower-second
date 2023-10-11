@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { RoutingComponent } from './routing/routing.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailsComponent } from './routing/details/details.component';
 
 const routes: Routes = [
   
@@ -22,7 +23,8 @@ const routes: Routes = [
     AppComponent,
     BindingComponent,
     DirectivesComponent,
-    RoutingComponent
+    RoutingComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
