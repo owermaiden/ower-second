@@ -20,7 +20,7 @@ export class DirectivesComponent {
     { name: 'Ower' , likeCount: 12 },   // JSON 
     { name: 'Sahin' , likeCount: 23 },
     { name: 'Matt' , likeCount: 23 }
-  ]
+  ];
 
 
   onClick(){
