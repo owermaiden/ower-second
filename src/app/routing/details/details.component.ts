@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Mentor } from 'src/app/shared/mentor';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-details',
@@ -9,12 +10,20 @@ import { Mentor } from 'src/app/shared/mentor';
 })
 export class DetailsComponent {
 
-  mentor: Mentor | undefined;
-  mentorId: number | undefined;
+  selected: Mentor | undefined;
+  mentors: Mentor[] = [
+    new Mentor(1,'Ower', 12),
+    new Mentor(2,'Sahin', 23),
+    new Mentor(3,'Matt', 4)
+  ];
 
-  constructor(private route: ActivatedRoute){
+  constructor(private route: ActivatedRoute, private location: Location){
 
     let index= Number(this.route.snapshot.paramMap.get('id'));
-    this.mentorId = index;
+    this.selected = this.mentors[index - 1];
+  }
+
+  goBack(){
+    this.location.back();
   }
 }
