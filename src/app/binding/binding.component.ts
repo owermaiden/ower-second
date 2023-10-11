@@ -1,15 +1,23 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-binding',
   templateUrl: './binding.component.html',
   styleUrls: ['./binding.component.css']
 })
-export class BindingComponent {
+export class BindingComponent implements OnInit {
 
   title: string = 'This is coming from TS file';
   age: number = 12;
   isDisabled: boolean = false;
+
+  constructor(){
+    console.log('Constructor called');
+  }
+
+  ngOnInit(): void {
+    console.log('Oninit called');
+  }
 
   onClick(event: Event):void{
     console.log(event);
