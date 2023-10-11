@@ -3,6 +3,7 @@
         <ul class="list-group">
             <li *ngFor="let mentor of mentors" 
             class="list-group-item list-group-item-action"
+            routerLink="/mentor/{{ mentor.id }}"
             >{{ mentor.name }}</li>
         </ul>
     </div>

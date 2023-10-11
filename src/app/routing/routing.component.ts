@@ -9,8 +9,8 @@ import { Mentor } from '../shared/mentor';
 export class RoutingComponent {
 
   mentors: Mentor[] = [
-    new Mentor('Ower', 12),
-    new Mentor('Sahin', 23),
-    new Mentor('Matt', 4)
+    new Mentor(1,'Ower', 12),
+    new Mentor(2,'Sahin', 23),
+    new Mentor(3,'Matt', 4)
   ];
 }

@@ -13,7 +13,8 @@ const routes: Routes = [
   
   {path:'bindings', component: BindingComponent},
   {path:'directives', component: DirectivesComponent},
-  {path:'routes', component: RoutingComponent}
+  {path:'routes', component: RoutingComponent},
+  {path:'mentor/:id', component:DetailsComponent}
 ]
 
 
