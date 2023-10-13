@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './routing/details/details.component';
 import { ParentComponent } from './xcomp/parent/parent.component';
 import { ChildComponent } from './xcomp/child/child.component';
+import { ServiceDemoComponent } from './service-demo/service-demo.component';
 
 const routes: Routes = [
   
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'directives', component: DirectivesComponent},
   {path:'routes', component: RoutingComponent},
   {path:'mentor/:id', component:DetailsComponent},
-  {path:'xcomp', component: ParentComponent}
+  {path:'xcomp', component: ParentComponent},
+  {path:'servicedemo', component: ServiceDemoComponent}
 ]
 
 
@@ -30,7 +32,8 @@ const routes: Routes = [
     RoutingComponent,
     DetailsComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ServiceDemoComponent
   ],
   imports: [
     BrowserModule,
