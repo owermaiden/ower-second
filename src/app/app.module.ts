@@ -11,6 +11,8 @@ import { DetailsComponent } from './routing/details/details.component';
 import { ParentComponent } from './xcomp/parent/parent.component';
 import { ChildComponent } from './xcomp/child/child.component';
 import { ServiceDemoComponent } from './service-demo/service-demo.component';
+import { AnewcompComponent } from './foldername/anewcomp/anewcomp.component';
+import { AnotherComponent } from './foldername/another/another.component';
 
 const routes: Routes = [
   
@@ -33,7 +35,9 @@ const routes: Routes = [
     DetailsComponent,
     ParentComponent,
     ChildComponent,
-    ServiceDemoComponent
+    ServiceDemoComponent,
+    AnewcompComponent,
+    AnotherComponent
   ],
   imports: [
     BrowserModule,
