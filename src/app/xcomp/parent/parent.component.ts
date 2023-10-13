@@ -26,6 +26,7 @@ export class ParentComponent {
   }
 
   onLike(id : number){
-    console.log(id);
+   let index = this.mentors.findIndex(mentor => mentor.id === id);
+   this.mentors[index].name = `${this.mentors[index].name} liked `;
   }
 }
