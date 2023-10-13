@@ -19,14 +19,13 @@ export class ParentComponent {
 
   onSelect(mentor: Mentor){
     this.selectedP = mentor;
-    console.log(mentor.name)
   }
 
   onClick(event : Event){
     console.log(event);
   }
 
-  onLike(event : any){
-    console.log(event);
+  onLike(id : number){
+    console.log(id);
   }
 }

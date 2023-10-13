@@ -15,9 +15,7 @@
         <br>
         <app-child [selectedC]="selectedP" (likeEvent)="onLike($event)"></app-child>
     </div>
-    <button class="btn btn-primary" 
-    [disabled]="isDisabled" 
-    (click)="onClick($event)"
+        <button [disabled]="isDisabled" (click)="onClick($event)" class="btn btn-primary" 
     >Click</button>
     HTML built in property
 </div>
