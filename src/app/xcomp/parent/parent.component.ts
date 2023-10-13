@@ -13,7 +13,7 @@ export class ParentComponent {
     new Mentor(2,'Sahin', 23),
     new Mentor(3,'Matt', 4)
   ];
-  isDisabled: boolean = true;
+  isDisabled: boolean = false;
 
   selectedP: Mentor | undefined;
 
@@ -22,7 +22,11 @@ export class ParentComponent {
     console.log(mentor.name)
   }
 
-  onClick(event : any){
+  onClick(event : Event){
+    console.log(event);
+  }
+
+  onLike(event : any){
     console.log(event);
   }
 }

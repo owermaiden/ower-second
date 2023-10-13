@@ -13,8 +13,11 @@
     <div class="col-6" style="background-color: rgb(20, 206, 119);">
         <h2 >Child Side</h2>
         <br>
-        <app-child [selectedC]="selectedP"></app-child>
+        <app-child [selectedC]="selectedP" (likeEvent)="onLike($event)"></app-child>
     </div>
-    <button [disabled]="isDisabled" (click)="onClick($event)">Click</button>
-    <!-- HTML built in property -->
+    <button class="btn btn-primary" 
+    [disabled]="isDisabled" 
+    (click)="onClick($event)"
+    >Click</button>
+    HTML built in property
 </div>
