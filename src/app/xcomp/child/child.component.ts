@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Mentor } from 'src/app/shared/mentor';
 
 @Component({
@@ -8,9 +8,11 @@ import { Mentor } from 'src/app/shared/mentor';
 })
 export class ChildComponent {
 @Input() selectedC: Mentor | undefined;
-
+@Output() likeEvent = new EventEmitter<number>();
 
 onLike(){
   if(this.selectedC) this.selectedC.likeCount!++;
+  this.likeEvent.emit(this.selectedC?.id);
 }
+
 }

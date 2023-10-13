@@ -15,6 +15,6 @@
         <br>
         <app-child [selectedC]="selectedP"></app-child>
     </div>
-    <button [disabled]="isDisabled"></button>
+    <button [disabled]="isDisabled" (click)="onClick($event)">Click</button>
     <!-- HTML built in property -->
 </div>

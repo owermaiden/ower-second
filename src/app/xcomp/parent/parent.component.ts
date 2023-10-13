@@ -21,4 +21,8 @@ export class ParentComponent {
     this.selectedP = mentor;
     console.log(mentor.name)
   }
+
+  onClick(event : any){
+    console.log(event);
+  }
 }
