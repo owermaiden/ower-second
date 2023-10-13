@@ -9,4 +9,8 @@ import { Mentor } from 'src/app/shared/mentor';
 export class ChildComponent {
 @Input() selectedC: Mentor | undefined;
 
+
+onLike(){
+  if(this.selectedC) this.selectedC.likeCount!++;
+}
 }

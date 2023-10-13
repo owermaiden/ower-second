@@ -6,7 +6,7 @@
             <a class="list-group-item list-group-item-action"
             *ngFor="let mentor of mentors"
             (click)="onSelect(mentor)"
-            >{{ mentor.name }}</a>
+            >{{ mentor.name }} {{mentor.likeCount}}</a>
         </div>
 
     </div>
