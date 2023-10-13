@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Mentor } from 'src/app/shared/mentor';
 
 @Component({
   selector: 'app-child',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
+@Input() selectedC: Mentor | undefined;
 
 }

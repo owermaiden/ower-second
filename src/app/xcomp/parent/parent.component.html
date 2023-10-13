@@ -11,9 +11,10 @@
 
     </div>
     <div class="col-6" style="background-color: rgb(20, 206, 119);">
-        <h2>Child Side</h2>
+        <h2 >Child Side</h2>
         <br>
-        <app-child></app-child>
-
+        <app-child [selectedC]="selectedP"></app-child>
     </div>
+    <button [disabled]="isDisabled"></button>
+    <!-- HTML built in property -->
 </div>

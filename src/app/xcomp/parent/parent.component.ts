@@ -13,11 +13,12 @@ export class ParentComponent {
     new Mentor(2,'Sahin', 23),
     new Mentor(3,'Matt', 4)
   ];
+  isDisabled: boolean = true;
 
-  selected: Mentor | undefined;
+  selectedP: Mentor | undefined;
 
   onSelect(mentor: Mentor){
-    this.selected = mentor;
+    this.selectedP = mentor;
     console.log(mentor.name)
   }
 }
