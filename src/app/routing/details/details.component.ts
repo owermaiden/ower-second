@@ -4,7 +4,7 @@ import { Mentor } from 'src/app/shared/mentor';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-details',
+  selector: 'z2',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })

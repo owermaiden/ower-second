@@ -13,4 +13,8 @@ export class RoutingComponent {
     new Mentor(2,'Sahin', 23),
     new Mentor(3,'Matt', 4)
   ];
+
+  selectedMentor : Mentor | undefined;
+
+  
 }
