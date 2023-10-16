@@ -24,7 +24,8 @@ const routes: Routes = [
   {path:'mentor/:id', component:DetailsComponent},
   {path:'xcomp', component: ParentComponent},
   {path:'servicedemo', component: ServiceDemoComponent},
-  {path:'left', component:LeftComponent}
+  {path:'left', component:LeftComponent},
+  {path:'right', component: RightComponent}
 ]
 
 

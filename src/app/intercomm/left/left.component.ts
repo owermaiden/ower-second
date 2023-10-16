@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MentorService } from 'src/app/mentor.service';
 import { Mentor } from 'src/app/shared/mentor';
 
@@ -12,7 +13,7 @@ export class LeftComponent implements OnInit {
 
   mentors: Mentor[] = [];
 
-  constructor(private service: MentorService){}
+  constructor(private service: MentorService, private router: Router){}
 
   ngOnInit(): void {
     this.mentors = this.service.mentors;
@@ -20,6 +21,7 @@ export class LeftComponent implements OnInit {
 
   onSelectMentor(mentor: Mentor){
     console.log(mentor);
+    this.router.navigate(['right']);
   }
 
 }
