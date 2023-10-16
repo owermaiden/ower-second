@@ -16,6 +16,7 @@ import { AnotherComponent } from './foldername/another/another.component';
 import { LeftComponent } from './intercomm/left/left.component';
 import { RightComponent } from './intercomm/right/right.component';
 import { PostComponent } from './post/post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   
@@ -51,6 +52,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   exports:[RouterModule],

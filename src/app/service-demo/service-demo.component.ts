@@ -14,7 +14,7 @@ export class ServiceDemoComponent implements OnInit {
   constructor(private service: MentorService){}
 
   ngOnInit(): void {
-    this.mentors = this.service.mentors;
+    this.mentors = this.service.mentors;// No delay
     console.log("mentors fetched")
   }
 
