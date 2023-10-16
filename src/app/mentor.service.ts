@@ -13,5 +13,9 @@ export class MentorService {
     new Mentor(3,'Matt', 4)
   ];
 
+  selectedMentor : Mentor = this.mentors[0];
+
   constructor() { }
+
+  
 }

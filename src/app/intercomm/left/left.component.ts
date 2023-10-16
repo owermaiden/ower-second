@@ -9,8 +9,7 @@ import { Mentor } from 'src/app/shared/mentor';
   styleUrls: ['./left.component.css']
 })
 export class LeftComponent implements OnInit {
-
-
+  
   mentors: Mentor[] = [];
 
   constructor(private service: MentorService, private router: Router){}
@@ -20,7 +19,7 @@ export class LeftComponent implements OnInit {
   }
 
   onSelectMentor(mentor: Mentor){
-    console.log(mentor);
+    this.service.selectedMentor = mentor;
     this.router.navigate(['right']);
   }
 
