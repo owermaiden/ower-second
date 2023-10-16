@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MentorService } from 'src/app/mentor.service';
 import { Mentor } from 'src/app/shared/mentor';
 
@@ -11,7 +12,7 @@ export class RightComponent implements OnInit{
 
   selectedMentor: Mentor | undefined;
 
-  constructor(private service: MentorService){
+  constructor(private service: MentorService, private router: Router){
     console.log('constructor of right');
   }
 
@@ -21,7 +22,8 @@ export class RightComponent implements OnInit{
   }
   // Before view rendered
 
-  onLikeMentor( selected: Mentor ){
-
+  onLikeMentor( liked: Mentor ){
+    this.service.likeMentor(liked);
+    this.router.navigate(['left']);
   }
 }

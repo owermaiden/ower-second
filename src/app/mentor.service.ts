@@ -17,5 +17,8 @@ export class MentorService {
 
   constructor() { }
 
-  
+  likeMentor(liked: Mentor){
+    let index = this.mentors.findIndex(mentor => mentor.id === liked.id);
+    this.mentors[index]!.likeCount! += 1;
+  }
 }
