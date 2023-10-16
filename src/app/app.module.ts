@@ -13,6 +13,8 @@ import { ChildComponent } from './xcomp/child/child.component';
 import { ServiceDemoComponent } from './service-demo/service-demo.component';
 import { AnewcompComponent } from './foldername/anewcomp/anewcomp.component';
 import { AnotherComponent } from './foldername/another/another.component';
+import { LeftComponent } from './intercomm/left/left.component';
+import { RightComponent } from './intercomm/right/right.component';
 
 const routes: Routes = [
   
@@ -21,7 +23,8 @@ const routes: Routes = [
   {path:'routes', component: RoutingComponent},
   {path:'mentor/:id', component:DetailsComponent},
   {path:'xcomp', component: ParentComponent},
-  {path:'servicedemo', component: ServiceDemoComponent}
+  {path:'servicedemo', component: ServiceDemoComponent},
+  {path:'left', component:LeftComponent}
 ]
 
 
@@ -37,7 +40,9 @@ const routes: Routes = [
     ChildComponent,
     ServiceDemoComponent,
     AnewcompComponent,
-    AnotherComponent
+    AnotherComponent,
+    LeftComponent,
+    RightComponent
   ],
   imports: [
     BrowserModule,

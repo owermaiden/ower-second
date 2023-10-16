@@ -13,5 +13,5 @@ export class MentorService {
     new Mentor(3,'Matt', 4)
   ];
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 }
