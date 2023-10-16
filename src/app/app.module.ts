@@ -15,6 +15,7 @@ import { AnewcompComponent } from './foldername/anewcomp/anewcomp.component';
 import { AnotherComponent } from './foldername/another/another.component';
 import { LeftComponent } from './intercomm/left/left.component';
 import { RightComponent } from './intercomm/right/right.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'xcomp', component: ParentComponent},
   {path:'servicedemo', component: ServiceDemoComponent},
   {path:'left', component:LeftComponent},
-  {path:'right', component: RightComponent}
+  {path:'right', component: RightComponent},
+  {path:'posts', component:PostComponent}
 ]
 
 
@@ -43,7 +45,8 @@ const routes: Routes = [
     AnewcompComponent,
     AnotherComponent,
     LeftComponent,
-    RightComponent
+    RightComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
