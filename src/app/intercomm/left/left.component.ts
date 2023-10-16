@@ -12,15 +12,19 @@ export class LeftComponent implements OnInit {
   
   mentors: Mentor[] = [];
 
-  constructor(private service: MentorService, private router: Router){}
+  constructor(private service: MentorService, private router: Router){
+    console.log('Constructor of left');
+  }
 
   ngOnInit(): void {
     this.mentors = this.service.mentors;
+    console.log('Oninit of left');
   }
+  // Before This component rendered 
 
   onSelectMentor(mentor: Mentor){
     this.service.selectedMentor = mentor;
-    this.router.navigate(['right']);
+    this.router.navigate(['right']); // Localhos://4200/right
   }
 
 }

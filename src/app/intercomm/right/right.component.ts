@@ -11,11 +11,15 @@ export class RightComponent implements OnInit{
 
   selectedMentor: Mentor | undefined;
 
-  constructor(private service: MentorService){}
+  constructor(private service: MentorService){
+    console.log('constructor of right');
+  }
 
   ngOnInit(): void {
     this.selectedMentor = this.service.selectedMentor;
+    console.log('OnInit of right');
   }
+  // Before view rendered
 
   onLikeMentor( selected: Mentor ){
 
