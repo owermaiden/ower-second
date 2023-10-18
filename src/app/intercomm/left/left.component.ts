@@ -17,6 +17,7 @@ export class LeftComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.fetchMentor$();
     this.mentors = this.service.mentors;
     console.log('Oninit of left');
   }

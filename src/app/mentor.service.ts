@@ -17,12 +17,19 @@ export class MentorService {
   constructor(private http: HttpClient) { }
 
 
-  fetchMentor$():Observable<Mentor[]>{
-    return this.http.get<ResponseType>(this.baseUrl)
-            .pipe(
-              map(response => response.data), // Function
-            );
+  fetchMentor$(){
+    this.http.get<ResponseType>(this.baseUrl)
+      .pipe(
+        map(response => response.data), // Function
+      )
+      .subscribe({
+        next: (data) => this.mentors = data,
+        error: (error) => console.log(error), // fallback method
+        complete: () => console.log("completed")
+    });
   }
+
+  
 
   likeMentor(liked: Mentor){
     let index = this.mentors.findIndex(mentor => mentor.id === liked.id);
