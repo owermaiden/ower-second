@@ -10,7 +10,7 @@ export class MentorService {
   
   mentors: Mentor[] = [];
 
-  baseUrl:string = 'localhost:8080/api/v1/mentors';
+  baseUrl:string = 'http://localhost:8080/api/v1/mentors';
 
   selectedMentor : Mentor = this.mentors[0];
 
