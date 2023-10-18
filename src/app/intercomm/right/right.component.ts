@@ -17,7 +17,10 @@ export class RightComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.selectedMentor = this.service.selectedMentor;
+    // this.selectedMentor = this.service.selectedMentor;
+    this.service.selectedMentor$.subscribe(
+      data => this.selectedMentor = data
+    );
     console.log('OnInit of right');
   }
   // Before view rendered

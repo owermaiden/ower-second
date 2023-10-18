@@ -24,7 +24,7 @@ export class LeftComponent implements OnInit {
   // Before This component rendered 
 
   onSelectMentor(mentor: Mentor){
-    this.service.selectedMentor = mentor;
+    this.service.onSelectMentor(mentor);
     this.router.navigate(['right']); // Localhos://4200/right
   }
 
